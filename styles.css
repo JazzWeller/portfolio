@@ -1,0 +1,65 @@
+body {
+	color: #414141; /* Dark gray */
+	background-color: #DDDDDD;
+	text-align: center;
+	font-size: 18px;
+	padding-right: 700px;
+	padding-left: 300px;
+}
+
+h1 {
+	padding-top: 2em;
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.6em;
+}	
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Helvetica", "Arial", sans-serif;
+}
+
+ul {
+	display: inline-block;
+	text-align: left;
+	margin: auto;
+}
+
+div {
+	border-left: 5px dashed #888888;
+	border-right: 5px dashed #888888;
+	margin-right: 250px;
+	margin-left: 250px;
+}
+
+hr {
+	width: 350px;
+	border: 3px dashed #888888;
+}
+
+.basic-index {
+	font-weight: bold;
+	list-style-type: square;
+	padding: 20px 50px 20px 50px;
+}
+
+.first-item:link {
+	color: black;
+}
+
+.second-item:link {
+	color: black;
+}
+
+.first-item:visited {
+	color: red;
+}
+
+.second-item:visited {
+	color: red;
+}	
+
+.other-pages {
+	padding-top: 25px;
+}
