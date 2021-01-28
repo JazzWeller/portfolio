@@ -1,65 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-	color: #414141; /* Dark gray */
-	background-color: #DDDDDD;
-	text-align: center;
-	font-size: 18px;
-	padding-right: 700px;
-	padding-left: 300px;
+  height: 1200px;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #5D6063;
 }
 
-h1 {
-	padding-top: 2em;
-	font-size: 2em;
+a:link,
+a:visited {
+  color: #5D6063;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
-h2 {
-	font-size: 1.6em;
-}	
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: "Helvetica", "Arial", sans-serif;
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  
+  width: 100%;
+  height: 100px;
+  padding: 25px;
+  background: #D6D9DE;
 }
 
-ul {
-	display: inline-block;
-	text-align: left;
-	margin: auto;
+.main {
+  z-index: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  background: #FFFFFF;
 }
 
-div {
-	border-left: 5px dashed #888888;
-	border-right: 5px dashed #888888;
-	margin-right: 250px;
-	margin-left: 250px;
+.leftside {
+  z-index: 1;
+  float: left;
+  width: 18%;
+  height: 100%;
+  padding-top: 100px;
+  background: #E6E9EE;
 }
 
-hr {
-	width: 350px;
-	border: 3px dashed #888888;
+.center {
+  z-index: 1;
+  float: left;
+  width: 63%;
+  height: 100%;
+  padding-top: 100px;
+  margin-right: 10px;
+  margin-left: 10px;
+  background: #E6E9EE;
 }
 
-.basic-index {
-	font-weight: bold;
-	list-style-type: square;
-	padding: 20px 50px 20px 50px;
+.rightside {
+  z-index: 1;
+  float: left;
+  width: 18%;
+  height: 100%;
+  padding-top: 100px;
+  background: #E6E9EE;
 }
 
-.first-item:link {
-	color: black;
+.menu {
+  margin-top: 15px;
 }
 
-.second-item:link {
-	color: black;
+.menu > li {
+  display: inline;
+  margin-right: 50px;
 }
 
-.first-item:visited {
-	color: red;
+.menu > li:last-of-type {
+  margin-right: 0px;
 }
 
-.second-item:visited {
-	color: red;
-}	
+.features-menu {
+  display: none;
+}
 
-.other-pages {
-	padding-top: 25px;
+.dropdown > span {
+  z-index: 2;
+  position: absolute;
+  right: 250px;
+  cursor: pointer;
+}
+
+li.dropdown:hover ul.features-menu{
+  z-index: 1;
+  display: flex;
+  direction: column;
+  background: #B2D6FF;
+  border-radius: 5px;
+  padding-top: 10px;
+  position: relative;
+  width: 125px;
+  right: 150px;
+}
+
+.features-menu li {
+  list-style: none;
+  border-bottom: 1px solid #FFF;
+  padding: 0px 40px 10px 20px;
+  margin: 10px;
+}
+
+.features-menu li:last-of-type {
+  border-bottom: none;
+}
+
+.features {
+  position: absolute;
 }
