@@ -82,40 +82,42 @@ a:hover {
   margin-right: 0px;
 }
 
-.features-menu {
-  display: none;
+@media only screen and (max-width: 900px) {
+  .center {
+    width: 100%;
+    height: 100%;
+  }
+  .leftside {
+    width: 0px;
+  }
+  .rightside {
+    width: 0px;
+  }
+  .menu > li {
+    margin-right: 25px;
+    font-size: 15px;
+  }
+  .menu >li:last-of-type {
+    margin-right: 0px;
+  }
 }
 
-.dropdown > span {
-  z-index: 2;
-  position: absolute;
-  right: 250px;
-  cursor: pointer;
-}
-
-li.dropdown:hover ul.features-menu{
-  z-index: 1;
-  display: flex;
-  direction: column;
-  background: #B2D6FF;
-  border-radius: 5px;
-  padding-top: 10px;
-  position: relative;
-  width: 125px;
-  right: 150px;
-}
-
-.features-menu li {
-  list-style: none;
-  border-bottom: 1px solid #FFF;
-  padding: 0px 40px 10px 20px;
-  margin: 10px;
-}
-
-.features-menu li:last-of-type {
-  border-bottom: none;
-}
-
-.features {
-  position: absolute;
+@media only screen and (min-width: 900px) {
+  .center {
+    width: 63%;
+    height: 100%;
+  }
+  .leftside {
+    width: 18%;
+  }
+  .rightside {
+    width: 18%;
+  }
+  .menu > li {
+    display: inline;
+    margin-right: 50px;
+  }
+  .menu > li:last-of-type {
+    margin-right: 0px;
+  }
 }
